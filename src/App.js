@@ -1,8 +1,12 @@
 import React from 'react';
+import Controls from './Controls';
+import UserList from './UserList';
+import Footer from './Footer';
+
+var isLoggedIn = true;
 
 function App() {
   var currentYear = new Date().getFullYear();
-  var isLoggedIn = true;
   var loginMessage = isLoggedIn ? <p>Welcome back!</p> : <p>Please log in.</p>;
 
   return (
@@ -11,8 +15,25 @@ function App() {
       <p>React Components</p>
       <p>{currentYear}</p>
       {loginMessage}
+      {RenderLoggedIn()}
     </div>
   );
+}
+
+function RenderLoggedIn() {
+  if (isLoggedIn) {
+    return (
+      <div>
+        <section>
+          <Controls />
+        </section>
+        <section>
+          <UserList />
+        </section>
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
