@@ -2,6 +2,7 @@ import React from 'react';
 import Controls from './Controls';
 import UserList from './UserList';
 import Footer from './Footer';
+import './App.css';
 
 var isLoggedIn = true;
 

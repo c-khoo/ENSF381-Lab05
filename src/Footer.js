@@ -1,12 +1,12 @@
 function Footer(){
-    var currentYear = new Date().getFullYear();
+    var currentYear = new Date().toLocaleDateString('en-CA');
     return(
-        
-        <Footer>
-            <p>Nayha & Chloe</p>
-            <p>{currentYear}</p>
-        </Footer>
-
+        <div>
+            <footer>
+                <p>Nayha & Chloe</p>
+                <p>{currentYear}</p>
+            </footer>
+        </div>
     );
 }
 
